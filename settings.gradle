@@ -7,4 +7,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Baseline Poid App"
-include ':app'
+include ':app',
+        ':core:base'
