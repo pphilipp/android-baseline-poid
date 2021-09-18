@@ -38,7 +38,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion libraries.materialLibVer
+        kotlinCompilerExtensionVersion = "1.0.1"
         kotlinCompilerVersion '1.5.21'
     }
     packagingOptions {
@@ -54,12 +54,13 @@ dependencies {
     implementation "androidx.appcompat:appcompat:${libraries.appcompatLibVer}"
 
     implementation "com.google.android.material:material:${libraries.materialLibVer}"
+
     implementation "androidx.compose.ui:ui:${libraries.composeLibVer}"
     implementation "androidx.compose.material:material:${libraries.composeLibVer}"
     implementation "androidx.compose.ui:ui-tooling-preview:${libraries.composeLibVer}"
+    implementation 'androidx.activity:activity-compose:1.3.1'
 
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${libraries.lifecycleRuntimeKtxLibVer}"
-    implementation "androidx.activity:activity-compose:${libraries.lifecycleRuntimeKtxLibVer}"
 
     testImplementation "junit:junit:${libraries.junitVer}"
     androidTestImplementation "androidx.test.ext:junit:${libraries.junitExtLibVer}"
