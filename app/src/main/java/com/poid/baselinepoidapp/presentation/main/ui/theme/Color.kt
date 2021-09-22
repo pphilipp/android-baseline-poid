@@ -1,4 +1,4 @@
-package com.poid.baselinepoidapp.ui.theme
+package com.poid.baselinepoidapp.presentation.main.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
