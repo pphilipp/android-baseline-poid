@@ -10,11 +10,11 @@ android {
     compileSdk configuration.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.poid.baselinepoidapp"
         minSdk configuration.minSdkVersion
         targetSdk configuration.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        applicationId "com.poid.baselinepoidapp"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -50,23 +50,29 @@ android {
 }
 
 dependencies {
+    // Modules dependencies
+    implementation project(':core:base')
 
+    // Base
     implementation "androidx.core:core-ktx:${libraries.supportLibVer}"
     implementation "androidx.appcompat:appcompat:${libraries.appcompatLibVer}"
-
     implementation "com.google.android.material:material:${libraries.materialLibVer}"
+    implementation "androidx.lifecycle:lifecycle-common-java8:${libraries.livedataKtxLibVer}"
 
+    // Compose
     implementation "androidx.compose.ui:ui:${libraries.composeLibVer}"
     implementation "androidx.compose.material:material:${libraries.composeLibVer}"
     implementation "androidx.compose.ui:ui-tooling-preview:${libraries.composeLibVer}"
     implementation 'androidx.activity:activity-compose:1.3.1'
 
+    // Lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:${libraries.lifecycleRuntimeKtxLibVer}"
 
     // DI
-    kapt 'com.google.dagger:dagger-compiler:2.38.1'
-    implementation 'com.google.dagger:dagger:2.38.1'
+    kapt "com.google.dagger:dagger-compiler:${libraries.daggerLibVer}"
+    implementation "com.google.dagger:dagger:${libraries.daggerLibVer}"
 
+    // Test
     testImplementation "junit:junit:${libraries.junitVer}"
     androidTestImplementation "androidx.test.ext:junit:${libraries.junitExtLibVer}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${libraries.espressoCoreLibVer}"
