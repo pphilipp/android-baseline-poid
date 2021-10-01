@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Dialog progress-->
+    <style name="BaseProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@android:color/background_light</item>
+    </style>
+
+    <style name="DialogTransparent" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!--END Dialog progress-->
+
+</resources>
