@@ -1,0 +1,10 @@
+android {
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "GENERAL_LOGGING_ENABLED", "true"
+        }
+        release {
+            buildConfigField "boolean", "GENERAL_LOGGING_ENABLED", "false"
+        }
+    }
+}

@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "$rootDir/buildsystem/common/buildtype-setup.gradle"
+
 android {
     compileSdk 30
 
@@ -17,8 +19,12 @@ android {
     }
 
     buildTypes {
+        debug {
+            resValue "bool", "GENERAL_LOGGING_ENABLED", "true"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
         release {
-            minifyEnabled false
+            resValue "bool", "GENERAL_LOGGING_ENABLED", "false"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

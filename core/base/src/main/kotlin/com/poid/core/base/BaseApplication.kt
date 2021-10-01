@@ -1,7 +1,7 @@
 package com.poid.core.base
 
 import android.app.Application
-import com.poid.core.base.di.BaseComponent
+import com.poid.core.di.BaseComponent
 
 abstract class BaseApplication : Application() {
 

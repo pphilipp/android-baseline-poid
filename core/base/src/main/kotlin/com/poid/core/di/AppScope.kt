@@ -1,4 +1,4 @@
-package com.poid.core.base.di
+package com.poid.core.di
 import javax.inject.Scope
 
 @Scope
