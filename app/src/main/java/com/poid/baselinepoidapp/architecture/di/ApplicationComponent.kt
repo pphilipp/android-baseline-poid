@@ -4,8 +4,8 @@ import com.poid.baselinepoidapp.architecture.di.module.ApplicationModule
 import com.poid.baselinepoidapp.architecture.AppApplication
 import com.poid.baselinepoidapp.architecture.di.viewmodel.ViewModelModule
 import com.poid.baselinepoidapp.presentation.main.MainActivity
-import com.poid.core.base.di.AppScope
-import com.poid.core.base.di.BaseComponent
+import com.poid.core.di.AppScope
+import com.poid.core.di.BaseComponent
 import dagger.Component
 
 @AppScope

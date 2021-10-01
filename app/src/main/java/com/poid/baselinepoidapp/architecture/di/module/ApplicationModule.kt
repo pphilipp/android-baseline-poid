@@ -3,7 +3,7 @@ package com.poid.baselinepoidapp.architecture.di.module
 import android.content.Context
 import android.os.Vibrator
 import com.poid.baselinepoidapp.architecture.AppApplication
-import com.poid.core.base.di.AppScope
+import com.poid.core.di.AppScope
 import dagger.Module
 import dagger.Provides
 

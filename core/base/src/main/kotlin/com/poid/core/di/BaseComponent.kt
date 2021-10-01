@@ -1,9 +1,8 @@
-package com.poid.core.base.di
+package com.poid.core.di
 
 import android.content.Context
 import com.poid.core.base.BaseActivity
 import com.poid.core.base.BaseFragment
-import dagger.Component
 
 interface BaseComponent {
 
