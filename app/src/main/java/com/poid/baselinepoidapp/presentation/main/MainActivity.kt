@@ -5,8 +5,10 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import androidx.lifecycle.lifecycleScope
 import com.poid.baselinepoidapp.architecture.AppApplication
 import com.poid.core.base.BaseActivity
+import kotlinx.coroutines.launch
 
 class MainActivity : BaseActivity() {
 
@@ -14,9 +16,18 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        observeViewModel(viewModel)
 
         setContent {
             Greeting(name = "🟢 ${viewModel.test}")
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        lifecycleScope.launch() {
+            viewModel.showProgress()
         }
     }
 
